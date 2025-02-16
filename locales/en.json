@@ -1,0 +1,34 @@
+{
+  "contact": "Contact",
+  "welcome": "Welcome",
+  "navigation": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm"
+  },
+  "about": {
+    "title": "About Me",
+    "introduction": "Hi, I'm Bram Gerrits, a full-stack web developer from the Netherlands with a focus on Nuxt and Laravel.",
+    "portrait": {
+      "alt": "Bram Gerrits Portrait"
+    }
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email Me"
+  },
+  "projects": {
+    "title": "Projects",
+    "visitWebsite": "Visit"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The content you're looking for doesn't exist.",
+    "returnHome": "Return Home"
+  }
+} 

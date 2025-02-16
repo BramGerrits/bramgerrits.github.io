@@ -1,0 +1,34 @@
+{
+  "contact": "Contact",
+  "welcome": "Welkom",
+  "navigation": {
+    "home": "Home",
+    "about": "Over Mij",
+    "projects": "Projecten",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hoi, Ik Ben"
+  },
+  "about": {
+    "title": "Over Mij",
+    "introduction": "Hoi, ik ben Bram Gerrits, een full-stack web developer uit Nederland met focus op Nuxt en Laravel.",
+    "portrait": {
+      "alt": "Bram Gerrits Portret"
+    }
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "E-mail Mij"
+  },
+  "projects": {
+    "title": "Mijn Projecten",
+    "visitWebsite": "Bezoeken"
+  },
+  "notFound": {
+    "title": "Pagina Niet Gevonden",
+    "message": "De inhoud die je zoekt bestaat niet.",
+    "returnHome": "Terug naar Home"
+  }
+} 
