@@ -2,8 +2,12 @@
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
-                <NuxtLink :to="localePath('/')" class="flex font-bold text-xl font-[faustina]">
-                    <SpinningSvg
+                <NuxtLink 
+                    :to="localePath('/')" 
+                    aria-label="Homepage" 
+                    class="flex font-bold text-xl font-[faustina]"
+                >
+                    <SpinningSvgClient
                         class="size-14"
                         svg-src="/images/logo.svg"
                         color="#92bbb5"
@@ -28,7 +32,7 @@
 </template>
 
 <script setup>
-    import SpinningSvg from './SpinningSvg.vue'
+    import SpinningSvgClient from './SpinningSvg.client.vue';
 
     const isMenuOpen = ref(false)
 

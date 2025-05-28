@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-    import { onMounted, onBeforeUnmount, ref } from 'vue'
     import * as THREE from 'three'
     import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader.js'
 
@@ -24,8 +23,11 @@
     let camera :  THREE.OrthographicCamera | null = null;
     let scene : THREE.Scene | null = null
     let animationFrameId : number | null = null;
+    let resizeObserver : ResizeObserver | null = null;
 
     onMounted(() => {
+        console.log(!container.value);
+
         if(!container.value) return;
 
         scene = new THREE.Scene()
@@ -94,7 +96,7 @@
             renderer.setPixelRatio(window.devicePixelRatio)
         }
 
-        const resizeObserver = new ResizeObserver(updateSize)
+        resizeObserver = new ResizeObserver(updateSize)
         resizeObserver.observe(container.value)
 
         const animate = () => {
@@ -102,14 +104,17 @@
             group.rotation.y += 0.01
             renderer.render(scene, camera)
         }
-
-        onBeforeUnmount(() => {
-            if(animationFrameId !== null) {
-                cancelAnimationFrame(animationFrameId)
-            }
-            
-            resizeObserver.disconnect()
-            renderer.dispose()
-        })
     })
+
+    onBeforeUnmount(() => {
+        if(animationFrameId !== null) {
+            cancelAnimationFrame(animationFrameId)
+        }
+        
+        if(resizeObserver) {
+            resizeObserver.disconnect()
+        }
+
+        renderer.dispose()
+    });
 </script>
