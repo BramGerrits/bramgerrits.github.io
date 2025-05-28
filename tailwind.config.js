@@ -10,6 +10,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#2c8a7c',
+          light: '#50b5a7',   
+          dark: '#207366',
+        },
+      },
       fontFamily: {
         heading: ['Faustina', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
