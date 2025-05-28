@@ -26,8 +26,6 @@
     let resizeObserver : ResizeObserver | null = null;
 
     onMounted(() => {
-        console.log(!container.value);
-
         if(!container.value) return;
 
         scene = new THREE.Scene()
