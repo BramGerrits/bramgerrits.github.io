@@ -8,7 +8,6 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
-    
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",
@@ -16,7 +15,9 @@
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/i18n": "^8.1.1",
     "@tailwindcss/typography": "^0.5.10",
+    "gsap": "^3.13.0",
     "nuxt": "^3.17.4",
+    "pixi.js": "^8.9.2",
     "three": "^0.176.0"
   },
   "devDependencies": {
