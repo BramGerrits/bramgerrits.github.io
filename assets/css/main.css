@@ -1,4 +1,5 @@
 @import './animations.css';
+@import './blog-content.css';
 
 @tailwind base;
 @tailwind components;

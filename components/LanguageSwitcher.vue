@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink v-for="locale in otherLocales" :key="locale.code" :to="switchLocalePath(locale.code)"
+    <NuxtLink v-for="locale in otherLocales" :key="locale.code" :to="$switchLocalePath(locale.code) || $localePath('/', locale.code)"
         class="text-md hover:text-primary flex items-center">
         <span class="mr-1">{{ locale.flag }}</span>
         {{ locale.name }}
@@ -8,9 +8,8 @@
 
 <script setup>
     const { locale, locales } = useI18n()
-    const switchLocalePath = useSwitchLocalePath()
 
     const otherLocales = computed(() =>
-    locales.value.filter(item => item.code !== locale.value)
+        locales.value.filter(item => item.code !== locale.value)
     )
 </script>
