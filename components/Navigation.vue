@@ -39,5 +39,8 @@
     const links = [
         { path: '/projects', name: 'navigation.projects' },
         { path: '/about', name: 'navigation.about' },
-    ]
+        { path: '/blog', name: 'navigation.blog' },
+    ];
+
+    const localePath = useLocalePath();
 </script>

@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/i18n',
         '@nuxt/fonts',
-        '@nuxt/image'
+        '@nuxt/image',
+        '@nuxt/content'
     ],
     vite : {
         build: {
@@ -38,6 +39,7 @@ export default defineNuxtConfig({
                 iso: 'nl-NL',
                 name: 'Nederlands',
                 file: 'nl.json',
+                language: 'nl',
                 flag: '🇳🇱'
             },
             {
@@ -45,6 +47,7 @@ export default defineNuxtConfig({
                 iso: 'en-US',
                 name: 'English',
                 file: 'en.json',
+                language: 'en',
                 flag: '🇬🇧'
             }
         ],
@@ -52,11 +55,24 @@ export default defineNuxtConfig({
         strategy: 'prefix_except_default',
         lazy: true,
         langDir: 'locales/',
+        baseUrl: process.env.I18N_BASE_URL,
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: 'i18n_redirected',
             alwaysRedirect: false,
             fallbackLocale: 'nl'
-        }
+        },
+    },
+    nitro: {
+        static: true,
+        prerender: {
+            crawlLinks: true,
+            routes: [],
+        },
+    },
+    hooks: {
+        async "prerender:routes"(ctx) {
+            // ToDo: dynamically add all blog routes instead of them being crawled
+        },
     }
 })
